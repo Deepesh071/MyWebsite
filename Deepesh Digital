@@ -13,54 +13,35 @@ body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg,#eef2ff,#fdf2f8);
   color: #111;
-  scroll-behavior: smooth;
 }
 
 /* HEADER */
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: white;
-  border-bottom: 2px solid #0f172a;
-  position: sticky;
-  top: 0;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:white;
+  border-bottom:2px solid #0f172a;
 }
 
-.logo {
-  font-weight: 600;
-  font-size: 22px;
-}
-
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #111;
-}
+.logo { font-weight:600; font-size:22px; }
 
 /* HERO */
 .hero {
-  text-align: center;
-  padding: 100px 20px;
+  text-align:center;
+  padding:80px 20px;
 }
 
-.hero h1 {
-  font-size: 42px;
-}
+.hero h1 { font-size:40px; }
 
 /* BUTTONS */
 .btn {
-  padding: 12px 25px;
-  border-radius: 8px;
-  margin: 8px;
-  border: none;
-  cursor: pointer;
-  color: white;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
+  padding:12px 20px;
+  margin:8px;
+  border:none;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
 }
 
 .whatsapp { background:#25D366; }
@@ -70,63 +51,51 @@ nav a {
 
 /* SECTION */
 section {
-  padding: 60px 20px;
-  border-bottom: 2px solid #0f172a;
+  padding:50px 20px;
+  border-bottom:2px solid #0f172a;
 }
 
-/* CARDS */
-.services, .portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  border: 2px solid #0f172a;
-  border-radius: 12px;
-  transition: 0.3s;
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  border:2px solid #0f172a;
+  transition:0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform:translateY(-10px);
+}
+
+/* IMAGE */
+img {
+  width:100%;
+  border-radius:10px;
 }
 
 /* FORM */
 form input, form textarea {
-  width: 80%;
-  padding: 10px;
-  margin: 10px;
+  width:80%;
+  padding:10px;
+  margin:10px;
 }
 
 /* POPUP */
 .popup {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: green;
-  color: white;
-  padding: 15px;
-  display: none;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-}
-
-/* FLOAT BUTTON */
-.float-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  padding: 15px;
-  border-radius: 50%;
-  color: white;
-  text-decoration: none;
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:green;
+  color:white;
+  padding:15px;
+  display:none;
 }
 </style>
 </head>
@@ -135,66 +104,86 @@ footer {
 
 <header>
   <div class="logo">🤖 Deepesh Digital</div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Grow Your Business Online 🚀</h1>
-  <p>Website | Instagram | Facebook | LinkedIn | Lead Generation</p>
+  <h1>Make Your Business Online 🚀</h1>
+  <p>I help businesses grow with websites & digital marketing</p>
 
-  <a href="https://wa.me/919399816768?text=Hi%20I%20need%20digital%20marketing">
-    <button class="btn whatsapp">💬 WhatsApp</button>
-  </a>
+  <!-- ONLY ONE BUTTON ROW -->
+  <div>
+    <a href="https://wa.me/919399816768?text=Hi I need digital marketing">
+      <button class="btn whatsapp">WhatsApp</button>
+    </a>
 
-  <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
-    <button class="btn instagram">📸 Instagram</button>
-  </a>
+    <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
+      <button class="btn instagram">Instagram</button>
+    </a>
 
-  <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank">
-    <button class="btn facebook">📘 Facebook</button>
-  </a>
+    <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank">
+      <button class="btn facebook">Facebook</button>
+    </a>
 
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">
-    <button class="btn linkedin">💼 LinkedIn</button>
-  </a>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>I help businesses grow online by creating websites, social media presence and generating leads.</p>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2>Services</h2>
-  <div class="services">
-    <div class="card">Website Development</div>
-    <div class="card">Instagram Growth</div>
-    <div class="card">Facebook Page Setup</div>
-    <div class="card">LinkedIn Branding</div>
-    <div class="card">Lead Generation</div>
+    <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">
+      <button class="btn linkedin">LinkedIn</button>
+    </a>
   </div>
 </section>
 
+<!-- ABOUT -->
+<section>
+  <h2>About Me</h2>
+  <p>I create high converting websites and manage social media to help businesses generate leads online.</p>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <h2>My Services</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+      <h3>Website Development</h3>
+      <p>Modern, responsive websites to grow your business online.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1557838923-2985c318be48">
+      <h3>Digital Marketing</h3>
+      <p>Boost your online presence and reach more customers.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868">
+      <h3>Social Media Setup</h3>
+      <p>Instagram & Facebook pages to connect with your audience.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section>
+  <h2>Why Choose Me</h2>
+  <p>✔ Fast Delivery</p>
+  <p>✔ Affordable Pricing</p>
+  <p>✔ Professional Design</p>
+  <p>✔ Lead Generation Focus</p>
+</section>
+
 <!-- PORTFOLIO -->
-<section id="portfolio">
-  <h2>Portfolio</h2>
-  <div class="portfolio">
-    <div class="card">Project 1</div>
-    <div class="card">Project 2</div>
-    <div class="card">Project 3</div>
+<section>
+  <h2>Demo Work</h2>
+  <div class="grid">
+    <div class="card">Business Website Demo</div>
+    <div class="card">Instagram Growth Demo</div>
+    <div class="card">Facebook Page Demo</div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section>
   <h2>Contact Me</h2>
 
   <form id="form">
@@ -207,20 +196,11 @@ footer {
 
 <div class="popup" id="popup">✅ Enquiry Sent!</div>
 
-<footer>
-  © 2026 Deepesh Digital
-</footer>
-
-<a class="float-btn" href="https://wa.me/919399816768?text=Hi%20I%20need%20service">💬</a>
-
 <script>
 document.getElementById("form").addEventListener("submit", function(e){
   e.preventDefault();
   document.getElementById("popup").style.display="block";
-
-  setTimeout(()=>{
-    document.getElementById("popup").style.display="none";
-  },3000);
+  setTimeout(()=>{document.getElementById("popup").style.display="none";},3000);
 });
 </script>
 
